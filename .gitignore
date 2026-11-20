@@ -1,0 +1,3 @@
+# 忽略大体积教材 PDF 与课件 PPTX（避免超过 GitHub 100MB 单文件限制）
+*.pdf
+*.pptx

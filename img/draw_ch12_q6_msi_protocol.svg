@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 740 310" width="740" height="310" style="background:#ffffff;font-family:'Microsoft YaHei',sans-serif;">
+  <text x="370" y="28" text-anchor="middle" font-size="16" font-weight="bold" fill="#1e293b">习题 12.6：双 CPU 总线监听 MSI 协议状态转换与访问序列演进图</text>
+
+  <!-- Step boxes from Step 0 to Step 4 -->
+  <!-- Step 0 -->
+  <rect x="30" y="65" width="115" height="210" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="87" y="90" text-anchor="middle" font-size="13" font-weight="bold" fill="#334155">0. 初始状态</text>
+  <circle cx="87" cy="145" r="26" fill="#f1f5f9" stroke="#64748b" stroke-width="2"/>
+  <text x="87" y="150" text-anchor="middle" font-size="13" font-weight="bold" fill="#475569">A: I</text>
+  <circle cx="87" cy="220" r="26" fill="#f1f5f9" stroke="#64748b" stroke-width="2"/>
+  <text x="87" y="225" text-anchor="middle" font-size="13" font-weight="bold" fill="#475569">B: I</text>
+
+  <!-- Step 1 -->
+  <rect x="172" y="65" width="115" height="210" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="229" y="88" text-anchor="middle" font-size="13" font-weight="bold" fill="#1e3a8a">1. CPU A 读</text>
+  <text x="229" y="106" text-anchor="middle" font-size="10" fill="#2563eb">(BusRd, 主存供数)</text>
+  <circle cx="229" cy="145" r="26" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="229" y="150" text-anchor="middle" font-size="13" font-weight="bold" fill="#1e3a8a">A: S</text>
+  <circle cx="229" cy="220" r="26" fill="#f1f5f9" stroke="#64748b" stroke-width="2"/>
+  <text x="229" y="225" text-anchor="middle" font-size="13" font-weight="bold" fill="#475569">B: I</text>
+
+  <!-- Step 2 -->
+  <rect x="314" y="65" width="115" height="210" rx="8" fill="#fef2f2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="371" y="88" text-anchor="middle" font-size="13" font-weight="bold" fill="#991b1b">2. CPU A 写</text>
+  <text x="371" y="106" text-anchor="middle" font-size="10" fill="#dc2626">(BusUpgr 升为独占)</text>
+  <circle cx="371" cy="145" r="26" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="371" y="150" text-anchor="middle" font-size="13" font-weight="bold" fill="#991b1b">A: M</text>
+  <circle cx="371" cy="220" r="26" fill="#f1f5f9" stroke="#64748b" stroke-width="2"/>
+  <text x="371" y="225" text-anchor="middle" font-size="13" font-weight="bold" fill="#475569">B: I</text>
+
+  <!-- Step 3 -->
+  <rect x="456" y="65" width="115" height="210" rx="8" fill="#fef2f2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="513" y="88" text-anchor="middle" font-size="13" font-weight="bold" fill="#991b1b">3. CPU B 写</text>
+  <text x="513" y="106" text-anchor="middle" font-size="10" fill="#dc2626">(BusRdX, A写回并作废)</text>
+  <circle cx="513" cy="145" r="26" fill="#f1f5f9" stroke="#64748b" stroke-width="2"/>
+  <text x="513" y="150" text-anchor="middle" font-size="13" font-weight="bold" fill="#475569">A: I</text>
+  <circle cx="513" cy="220" r="26" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="513" y="225" text-anchor="middle" font-size="13" font-weight="bold" fill="#991b1b">B: M</text>
+
+  <!-- Step 4 -->
+  <rect x="598" y="65" width="115" height="210" rx="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="655" y="88" text-anchor="middle" font-size="13" font-weight="bold" fill="#166534">4. CPU A 读</text>
+  <text x="655" y="106" text-anchor="middle" font-size="10" fill="#16a34a">(BusRd, B供数降为S)</text>
+  <circle cx="655" cy="145" r="26" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="655" y="150" text-anchor="middle" font-size="13" font-weight="bold" fill="#166534">A: S</text>
+  <circle cx="655" cy="220" r="26" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="655" y="225" text-anchor="middle" font-size="13" font-weight="bold" fill="#166534">B: S</text>
+
+  <!-- Connecting arrows -->
+  <line x1="145" y1="170" x2="172" y2="170" stroke="#475569" stroke-width="2"/>
+  <line x1="287" y1="170" x2="314" y2="170" stroke="#475569" stroke-width="2"/>
+  <line x1="429" y1="170" x2="456" y2="170" stroke="#475569" stroke-width="2"/>
+  <line x1="571" y1="170" x2="598" y2="170" stroke="#475569" stroke-width="2"/>
+</svg>

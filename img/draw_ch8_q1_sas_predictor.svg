@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 740 380" width="740" height="380" style="background:#ffffff;font-family:'Microsoft YaHei',sans-serif;">
+  <text x="370" y="28" text-anchor="middle" font-size="16" font-weight="bold" fill="#1e293b">习题 8.1：SAs (Per-Set BHT + Per-Set PHT) 两级自适应转移猜测器结构图</text>
+  <rect x="180" y="50" width="380" height="38" rx="6" fill="#e0e7ff" stroke="#4f46e5" stroke-width="2"/>
+  <text x="370" y="74" text-anchor="middle" font-size="14" font-weight="bold" fill="#312e81">转移指令地址 (Branch PC)</text>
+  <polyline fill="none" stroke="#2563eb" stroke-width="2.5" points="270,88 270,135"/>
+  <text x="260" y="115" text-anchor="end" font-size="12" font-weight="bold" fill="#2563eb">PC 低 6 位 (索引 2^6 = 64 项)</text>
+  <rect x="150" y="135" width="240" height="100" rx="6" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="270" y="158" text-anchor="middle" font-size="14" font-weight="bold" fill="#1e3a8a">转移历史表 BHT (Per-Set)</text>
+  <text x="270" y="178" text-anchor="middle" font-size="12" fill="#1e40af">共 2^6 = 64 项 × 每项 9 位 = 576 bits</text>
+  <rect x="180" y="192" width="180" height="28" rx="4" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="270" y="211" text-anchor="middle" font-size="12" font-weight="bold" fill="#1e3a8a">9 位局部集合历史向量 (BHR)</text>
+  <polyline fill="none" stroke="#d97706" stroke-width="2.5" points="490,88 490,260"/>
+  <text x="500" y="175" font-size="12" font-weight="bold" fill="#b45309">PC 低 8 位 (选择 2^8 = 256 个 PHT 组)</text>
+  <polyline fill="none" stroke="#2563eb" stroke-width="2.5" points="270,235 270,260"/>
+  <text x="260" y="252" text-anchor="end" font-size="12" font-weight="bold" fill="#2563eb">9 位历史索引 (2^9 = 512 项/组)</text>
+  <rect x="180" y="260" width="400" height="72" rx="6" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+  <text x="380" y="285" text-anchor="middle" font-size="14" font-weight="bold" fill="#92400e">模式历史表 PHT (Per-Set: 2^8 组 × 2^9 项 × 2 位饱和计数器)</text>
+  <text x="380" y="308" text-anchor="middle" font-size="12" fill="#b45309">容量 = 256 × 512 × 2 bits = 262,144 bits (总计 262,720 bits)</text>
+  <line x1="380" y1="332" x2="380" y2="365" stroke="#16a34a" stroke-width="3"/>
+  <text x="395" y="358" font-size="14" font-weight="bold" fill="#166534">转移预测输出 (2位饱和计数器最高位: T / NT)</text>
+</svg>

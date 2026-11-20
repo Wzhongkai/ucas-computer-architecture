@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 740 520" width="740" height="520" style="background:#ffffff;font-family:'Microsoft YaHei',sans-serif;">
+  <text x="370" y="28" text-anchor="middle" font-size="16" font-weight="bold" fill="#1e293b">习题 7.6：采用物理寄存器堆重命名与保留站后读寄存器的双发射动态流水线结构图</text>
+  <rect x="210" y="50" width="240" height="46" rx="6" fill="#fce7f3" stroke="#db2777" stroke-width="2"/>
+  <text x="330" y="78" text-anchor="middle" font-size="14" font-weight="bold" fill="#9d174d">5. 重排序缓存 (ROB - 顺序提交)</text>
+  <line x1="100" y1="125" x2="640" y2="125" stroke="#dc2626" stroke-width="3.5"/>
+  <text x="605" y="116" text-anchor="end" font-size="13" font-weight="bold" fill="#dc2626">公共结果总线 (CDB)</text>
+  <line x1="330" y1="125" x2="330" y2="96" stroke="#dc2626" stroke-width="2"/>
+  <rect x="140" y="155" width="105" height="44" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="192" y="182" text-anchor="middle" font-size="13" font-weight="bold" fill="#166534">定点部件</text>
+  <rect x="278" y="155" width="105" height="44" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="330" y="182" text-anchor="middle" font-size="13" font-weight="bold" fill="#166534">浮点部件</text>
+  <rect x="415" y="155" width="105" height="44" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="467" y="182" text-anchor="middle" font-size="13" font-weight="bold" fill="#166534">访存部件</text>
+  <rect x="555" y="150" width="85" height="54" rx="6" fill="#f1f5f9" stroke="#475569" stroke-width="2"/>
+  <text x="597" y="182" text-anchor="middle" font-size="13" font-weight="bold" fill="#334155">数据 Cache</text>
+  <line x1="520" y1="177" x2="555" y2="177" stroke="#475569" stroke-width="2"/>
+  <line x1="192" y1="155" x2="192" y2="125" stroke="#16a34a" stroke-width="2"/>
+  <line x1="330" y1="155" x2="330" y2="125" stroke="#16a34a" stroke-width="2"/>
+  <line x1="467" y1="155" x2="467" y2="125" stroke="#16a34a" stroke-width="2"/>
+  <rect x="190" y="245" width="280" height="46" rx="6" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+  <text x="330" y="273" text-anchor="middle" font-size="14" font-weight="bold" fill="#92400e">物理寄存器堆 (PRF - 保留站后读寄存器)</text>
+  <polyline fill="none" stroke="#dc2626" stroke-width="2" points="115,125 115,268 190,268"/>
+  <text x="75" y="260" font-size="12" font-weight="bold" fill="#dc2626">结果写回</text>
+  <line x1="115" y1="222" x2="467" y2="222" stroke="#dc2626" stroke-dasharray="4,4" stroke-width="1.5"/>
+  <text x="330" y="217" text-anchor="middle" font-size="11" fill="#dc2626">CDB 旁路前递网络 (Bypass)</text>
+  <line x1="230" y1="245" x2="192" y2="199" stroke="#475569" stroke-width="2"/>
+  <line x1="330" y1="245" x2="330" y2="199" stroke="#475569" stroke-width="2"/>
+  <line x1="430" y1="245" x2="467" y2="199" stroke="#475569" stroke-width="2"/>
+  <rect x="210" y="325" width="240" height="46" rx="6" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="330" y="353" text-anchor="middle" font-size="14" font-weight="bold" fill="#1e3a8a">3. 全局保留站 (Global RS - 乱序发射)</text>
+  <line x1="290" y1="325" x2="290" y2="291" stroke="#2563eb" stroke-width="2"/>
+  <line x1="370" y1="325" x2="370" y2="291" stroke="#2563eb" stroke-width="2"/>
+  <rect x="210" y="400" width="240" height="44" rx="6" fill="#e0e7ff" stroke="#4f46e5" stroke-width="2"/>
+  <text x="330" y="427" text-anchor="middle" font-size="14" font-weight="bold" fill="#312e81">2. 译码与重命名 (双发射: 2条/拍)</text>
+  <line x1="290" y1="400" x2="290" y2="371" stroke="#4f46e5" stroke-width="2"/>
+  <line x1="370" y1="400" x2="370" y2="371" stroke="#4f46e5" stroke-width="2"/>
+  <rect x="515" y="385" width="175" height="75" rx="6" fill="#fef9c3" stroke="#ca8a04" stroke-width="2"/>
+  <text x="602" y="412" text-anchor="middle" font-size="13" font-weight="bold" fill="#854d0e">寄存器重命名表 (RAT)</text>
+  <text x="602" y="432" text-anchor="middle" font-size="11" fill="#854d0e">(逻辑号 | state | valid)</text>
+  <text x="602" y="448" text-anchor="middle" font-size="11" fill="#854d0e">动态分配/释放物理寄存器</text>
+  <line x1="450" y1="422" x2="515" y2="422" stroke="#ca8a04" stroke-width="2"/>
+  <polyline fill="none" stroke="#db2777" stroke-dasharray="4,4" stroke-width="1.5" points="450,73 665,73 665,385"/>
+  <text x="672" y="240" font-size="11" fill="#db2777" transform="rotate(90 672 240)">提交释放旧物理寄存器</text>
+  <rect x="210" y="465" width="240" height="40" rx="6" fill="#f1f5f9" stroke="#475569" stroke-width="2"/>
+  <text x="330" y="490" text-anchor="middle" font-size="14" font-weight="bold" fill="#1e293b">1. 取指与指令队列 (2条/拍)</text>
+  <line x1="290" y1="465" x2="290" y2="444" stroke="#475569" stroke-width="2"/>
+  <line x1="370" y1="465" x2="370" y2="444" stroke="#475569" stroke-width="2"/>
+</svg>
